@@ -1,0 +1,25 @@
+to create a python project on django-
+django-admin startproject project name
+
+to run server-
+python manage.py runserver
+
+python data flows in following pattern after a server is created:
+1) the request is made through the browser.
+
+2) the url is first checked for the same link(if url is written in the urls segment  then step 3)
+for example :
+  a sample url path looks like:
+    
+    urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',"appname.python-file-name(generally views).function name(in views)"),
+    ]
+
+3) it goes to the created views file looks for the function that is to be called.
+  
+  a view file looks like : 
+    def home(request):
+      return render(request,'login/home.html')
+4) after this the page with the name home.html is searched in the directories where the pages are to be stored.
+It can be always changed in the dirs of settings just by adding the name of the folder in the list
