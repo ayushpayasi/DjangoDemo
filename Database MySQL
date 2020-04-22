@@ -1,3 +1,8 @@
+1 install xampp and then configure the mysql-
+
+
+2 for mysql replace the database variable in setttings
+with
 DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.mysql',
